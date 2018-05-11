@@ -168,7 +168,8 @@ class HarParser(object):
                 pass
             elif mimeType.startswith("application/json"):
                 try:
-                    post_data = json.loads(post_data)
+                    if post_data:
+                        post_data = json.loads(post_data)
                     request_data_key = "json"
                 except utils.JSONDecodeError:
                     pass
