@@ -2,4 +2,5 @@
 """
 
 from har2case.cli import main
+
 main()

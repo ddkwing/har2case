@@ -16,9 +16,9 @@ def main():
         '-V', '--version', dest='version', action='store_true',
         help="show version")
     parser.add_argument('har_source_file', nargs='?',
-        help="Specify HAR source file")
+                        help="Specify HAR source file")
     parser.add_argument('output_testset_file', nargs='?',
-        help="Optional. Specify converted YAML/JSON testset file.")
+                        help="Optional. Specify converted YAML/JSON testset file.")
     parser.add_argument(
         '--filter', help="Specify filter keyword, only url include filter string will be converted.")
     parser.add_argument(

@@ -1,8 +1,9 @@
-#encoding: utf-8
+# encoding: utf-8
 import io
 
-from har2case import __version__
 from setuptools import find_packages, setup
+
+from har2case import __version__
 
 with io.open("README.rst", encoding='utf-8') as f:
     long_description = f.read()

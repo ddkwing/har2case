@@ -33,7 +33,6 @@ except ImportError:
 # ---------
 
 if is_py2:
-    import urlparse
 
     ensure_ascii = True
     builtin_str = str
@@ -44,7 +43,6 @@ if is_py2:
     integer_types = (int, long)
 
 elif is_py3:
-    import urllib.parse as urlparse
 
     ensure_ascii = False
     builtin_str = str

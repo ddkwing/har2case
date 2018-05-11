@@ -27,6 +27,7 @@ def load_har_log_entries(file_path):
             logging.error("HAR file content error: {}".format(file_path))
             sys.exit(1)
 
+
 def x_www_form_urlencoded(post_data):
     """ convert origin dict to x-www-form-urlencoded
     @param post_data
@@ -42,6 +43,7 @@ def x_www_form_urlencoded(post_data):
         ])
     else:
         return post_data
+
 
 def convert_list_to_dict(origin_list):
     """ convert HAR data list to mapping

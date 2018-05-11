@@ -6,12 +6,12 @@ import sys
 from collections import OrderedDict
 
 import yaml
+
 from har2case import utils
 from har2case.compat import bytes, ensure_ascii, urlparse
 
 
 class HarParser(object):
-
     IGNORE_REQUEST_HEADERS = [
         "host",
         "accept",
@@ -177,7 +177,7 @@ class HarParser(object):
                 # post_data = utils.x_www_form_urlencoded(post_data)
                 pass
             else:
-                #TODO: make compatible with more mimeType
+                # TODO: make compatible with more mimeType
                 pass
 
             testcase_dict["request"][request_data_key] = post_data
@@ -287,6 +287,7 @@ class HarParser(object):
     def make_testcases(self):
         """ extract info from HAR log entries list and make testcase list
         """
+
         def is_exclude(url, exclude_str):
             exclude_str_list = exclude_str.split("|")
             for exclude_str in exclude_str_list:
