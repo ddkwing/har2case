@@ -344,7 +344,7 @@ class HarParser(object):
         logging.debug("Start to generate YAML testset.")
 
         with io.open(yaml_file, 'w', encoding="utf-8") as outfile:
-            yaml.dump(self.testset, outfile, allow_unicode=True, default_flow_style=False, indent=4)
+            yaml.safe_dump(self.testset, outfile, allow_unicode=True, default_flow_style=False, indent=4)
 
         logging.info("Generate YAML testset successfully: {}".format(yaml_file))
 
