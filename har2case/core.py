@@ -8,7 +8,8 @@ from collections import OrderedDict
 import yaml
 
 from har2case import utils
-from har2case.compat import bytes, ensure_ascii, urlparse
+from har2case.compat import bytes, ensure_ascii
+from urllib2 import urlparse
 
 
 class HarParser(object):
